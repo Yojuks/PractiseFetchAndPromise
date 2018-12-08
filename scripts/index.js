@@ -59,24 +59,16 @@
 				// create <button type="submit">Delete</button>
 				//TODO next time!
 			}
-		})
-
-		var blogItems = document.getElementsByClassName('blog-item')
-
-			blogItems.forEach(function(element) {
-				console.log(element)
-				var button = element.getElementById('change-color');
-				button.addEventListener('click', function(){
-					element.style.background = "#ooooff";
+		}).then(function(){
+			var blogItems = document.querySelectorAll('.blog-item');
+			Array.from(blogItems).forEach(function(item) {
+				var button = item.querySelector('button');
+				console.log(button)
+				button.addEventListener('click', function() {
+					item.classList.toggle("blog-item--colored")
 				})
-			})	
-
-		// Вибираємо всі елементи тобто їх буде 10
-		// даємо івент, в який потрібно передати саме той елемент, якому ми хочемо змінити колір
-		// element.style.background = '#0000ff';
-		// changeColor(element) {
-
-		// }
+		 });
+		})
 	}
  )();
 
