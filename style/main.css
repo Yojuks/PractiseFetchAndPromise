@@ -1,0 +1,17 @@
+.blog {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.blog-item {
+	text-align: center;
+	width: 25%;
+	background: gray;
+	padding: 15px;
+	margin: 15px;
+	box-sizing: border-box;
+}
+
